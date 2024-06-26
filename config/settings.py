@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     "auth_app",
     "main_app",
     "blog_app",
+    'shop_app',
+    'cart_app',
+    'orders_app',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +62,8 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "templates"],
+        # "DIRS": [BASE_DIR / "templates"],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -67,6 +71,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'cart_app.context_processors.cart'
             ],
         },
     },
@@ -130,7 +135,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-import os
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+CART_SESSION_ID = 'cart'
