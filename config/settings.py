@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'shop_app',
     'cart_app',
     'orders_app',
+    'payment_app',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,8 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 CART_SESSION_ID = 'cart'
+
+IAMPORT_API_KEY = 'imp10781812'
+IAMPORT_API_SECRET = 'tVZHIXzhBmmOvdJjhmEVd3osXkAE2Td1BLlrKtz5vrGIgFLTzv4RqeqKkaGP5boVbH6HFlUQHLr6qtlj'
+
+IAMPORT_CODE = 'imp10781812'
