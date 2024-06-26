@@ -40,10 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "auth_app",
-<<<<<<< HEAD
-=======
     "main_app",
->>>>>>> 90769b96bb00ed18a1af52f35b34ba0b4e991049
     "blog_app",
 ]
 
@@ -130,11 +127,10 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-<<<<<<< HEAD
-=======
-STATICFILES_DIRS = [ BASE_DIR / 'static', ]
->>>>>>> 90769b96bb00ed18a1af52f35b34ba0b4e991049
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 import os
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
